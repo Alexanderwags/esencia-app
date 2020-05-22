@@ -25,6 +25,7 @@ function SearchHome(props) {
         <div className={Styles.info}>
           <h1>
             Encontrar tu próximo hogar es esencial,
+            <br />
             <em>
               hacerlo fácil es nuestra{" "}
               <span className={Styles.letra2}>esencia</span>
@@ -32,7 +33,6 @@ function SearchHome(props) {
           </h1>
         </div>
       </div>
-      <Linea />
     </section>
   );
 }

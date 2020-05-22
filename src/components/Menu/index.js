@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -17,8 +17,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MailIcon from "@material-ui/icons/Mail";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import img from "../../assests/Header/Logo_logo-orig.png";
+import img from "../../assests/Svg/portada.svg";
 import Styles from "./styles/Styles.module.scss";
+import KeyPortada from "../../assests/Svg/KeyPortada";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -118,7 +119,7 @@ export default function PersistentDrawerLeft() {
             <Route path="/">
               <div className={Styles.card}>
                 <Link to="/">
-                  <img src={img} alt="portada" />
+                  <KeyPortada />
                 </Link>
               </div>
             </Route>

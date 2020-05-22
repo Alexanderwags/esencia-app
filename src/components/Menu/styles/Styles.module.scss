@@ -9,14 +9,24 @@
       align-items: center;
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1),
         10px 0px 5px 0px rgba(0, 0, 0, 0.1);
-      img {
+
+      svg {
         width: 124px;
         max-width: 100%;
       }
+      animation-name: scrolll;
+      animation-duration: 5s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      animation-play-state: paused;
     }
+
     .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       width: 1180px;
       margin: 0 auto;
@@ -28,7 +38,8 @@
         }
       }
       .router {
-        width: 776px;
+        width: 60%;
+        margin-left: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,6 +48,25 @@
           width: 20%;
           text-decoration: none;
         }
+      }
+    }
+  }
+  @keyframes scrolll {
+    from {
+      transform: scale(1);
+      visibility: visible;
+    }
+
+    to {
+      display: none;
+      transform: scale(1.2);
+      height: 42px;
+      background: none;
+
+      background-color: yellowgreen;
+
+      .key {
+        transform: scale(2.2);
       }
     }
   }
