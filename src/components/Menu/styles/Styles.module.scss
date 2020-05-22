@@ -1,0 +1,43 @@
+:local {
+  .header {
+    .card {
+      width: 190.585px;
+      height: 190.585px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1),
+        10px 0px 5px 0px rgba(0, 0, 0, 0.1);
+      img {
+        width: 124px;
+        max-width: 100%;
+      }
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1180px;
+      margin: 0 auto;
+      border: 0;
+      .menu {
+        display: none !important;
+        @media (max-width: 992px) {
+          display: block !important;
+        }
+      }
+      .router {
+        width: 776px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          color: white;
+          width: 20%;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
