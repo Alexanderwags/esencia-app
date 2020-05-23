@@ -1,0 +1,83 @@
+:local {
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 520px;
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image {
+        @media (max-width: 1279px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          position: relative;
+          width: 354px;
+          height: 337px;
+          z-index: 4;
+          box-shadow: -3px 3px 10px #373640, -48px -48px #2f9bb3;
+          max-width: 100%;
+          background-size: cover;
+          background-position: center;
+          margin-left: 48px;
+        }
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .text {
+          position: relative;
+          margin: 0;
+          z-index: 4;
+          max-width: 570px;
+          h3 {
+            text-align: left;
+            font-size: 2.25rem;
+            line-height: 1.2;
+            letter-spacing: 0rem;
+            color: #262c3b;
+            margin: 0;
+          }
+          p {
+            text-align: justify;
+            font-family: "Brandon_light";
+            font-size: 1.3125rem;
+            line-height: 1.2;
+            letter-spacing: 0rem;
+            margin-top: 30px;
+            color: #848484;
+            text-indent: 2rem;
+          }
+        }
+        .btn {
+          font-size: 1.75rem;
+          line-height: 1.2;
+          letter-spacing: 0rem;
+          color: #fff;
+          background-color: #262c3b;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 254px;
+          height: 52px;
+          border: none;
+          box-shadow: none;
+          margin-top: 30px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
