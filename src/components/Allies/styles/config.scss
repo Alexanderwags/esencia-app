@@ -1,0 +1,9 @@
+.allies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+    display: none;
+  }
+}

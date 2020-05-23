@@ -1,34 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import Swiper from "react-id-swiper";
-
-const ManipulatingSwiper = () => {
-  const [swiper, setSwiper] = useState(null);
-
-  const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext();
-    }
-  };
-
-  const goPrev = () => {
-    if (swiper !== null) {
-      swiper.slidePrev();
-    }
+import "swiper/css/swiper.css";
+import Styles from "./styles/Styles.module.scss";
+import "./styles/config.scss";
+const SimpleSwiperWithParams = ({ children }) => {
+  const params = {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    autoplay: {
+      delay: 12500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   };
 
   return (
-    <div>
-      <Swiper getSwiper={setSwiper}>
-        <div>Slide 1</div>
-        <div>Slide 2</div>
-        <div>Slide 3</div>
-        <div>Slide 4</div>
-        <div>Slide 5</div>
+    <div className={Styles.container}>
+      <Swiper {...params} style={{ width: "100%" }}>
+        {children}
       </Swiper>
-      <button onClick={goPrev}>Prev</button>
-      <button onClick={goNext}>Next</button>
     </div>
   );
 };
 
-export default ManipulatingSwiper;
+export default SimpleSwiperWithParams;
