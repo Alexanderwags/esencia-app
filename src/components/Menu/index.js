@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -83,7 +83,20 @@ export default function PersistentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [animate, setanimate] = useState(false);
 
+  useEffect(() => {
+    return console.log(window.scrollY);
+  }, []);
+  function verifiqued() {
+    let scrool = window.scrollY;
+
+    if (scrool > 100) {
+      setanimate(true);
+    } else if (scrool == 0) {
+      setanimate(false);
+    }
+  }
   const handleDrawerOpen = () => {
     setOpen(true);
   };
