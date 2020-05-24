@@ -91,21 +91,15 @@ export default function PersistentDrawerLeft() {
     let let1 = document.getElementById("ecencia");
     let let2 = document.getElementById("inm");
     let let0 = document.getElementById("key");
-    // element.onanimationend = () => {
-    //   console.log("event : ", element.style.animationName);
-    //   element.setAttribute("style", " animation-play-state: paused;");
-    //   element.style.height = "41px";
-    // };
-    // element.addEventListener("webkitAnimationEnd", myStartFunction);
+    let st1 = window.scrollY;
 
-    // function myStartFunction(event) {
-    //   let com = event.animationName;
-    //   com += "";
-    //   console.log(com);
-    //   if (com === "openn") {
-    //     console.log("Animation-name is: ", event.animationName);
-    //   }
-    // }
+    if (st1 > 0) {
+      setanimate(true);
+      element.className = "carddd animate";
+    } else if (st1 === 0) {
+      setanimate(false);
+      element.className = "carddd animated";
+    }
     if (animate === false) {
       let1.setAttribute("style", "display:block");
       let2.setAttribute("style", "display:block");
@@ -130,11 +124,7 @@ export default function PersistentDrawerLeft() {
         head.style.backgroundColor = "#287c8f";
       }
     });
-    if (animate) {
-      element.setAttribute("style", "animation-play-state: running");
-    } else if (animate === false) {
-      element.setAttribute("style", "animation-play-state: running");
-    }
+
     window.addEventListener(
       "scroll",
       function () {

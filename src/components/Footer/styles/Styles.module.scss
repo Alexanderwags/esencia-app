@@ -1,0 +1,110 @@
+:local {
+  .footer {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    height: 230px;
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      padding: 40px;
+      display: flex;
+      @media (max-width: 992px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.2;
+        letter-spacing: 0rem;
+        text-decoration: none;
+        max-width: 500px;
+        padding: 20px;
+        .redesociales {
+          display: flex;
+          align-items: center;
+          .linn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e9a900;
+            border-radius: 100%;
+            margin: 10px;
+            width: 30px;
+            height: 30px;
+          }
+          a {
+            font-size: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: 0rem;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        .text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            fill: #fff;
+            width: 32px;
+            height: 31px;
+          }
+          .link {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.2;
+            letter-spacing: 0rem;
+            text-decoration: none;
+            font-weight: 400;
+            margin-left: 20px;
+          }
+        }
+      }
+      .infored {
+        position: relative;
+        svg {
+          opacity: 0.08;
+          width: 222px !important;
+          height: 222px !important;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          bottom: -10px;
+          left: -16px;
+        }
+      }
+    }
+  }
+  .end {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0rem;
+    text-align: center;
+    padding: 20px;
+    p {
+      color: #fff;
+      font-size: 1rem;
+      line-height: 1.2;
+      letter-spacing: 0rem;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}

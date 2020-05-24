@@ -7,6 +7,7 @@ import HomeContact from "../components/HomeContact";
 import Allies from "./../components/Allies";
 import Comments from "../components/Comments";
 import BlogInfo from "./../components/BlogInfo/index";
+import Subscribe from "./../components/Subscribe/index";
 const Home = (props) => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Home = (props) => {
       <Allies />
       <Comments />
       <BlogInfo />
+      <Subscribe />
     </div>
   );
 };
