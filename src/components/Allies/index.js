@@ -11,7 +11,7 @@ function Allies(props) {
         <h1>Nuestros Aliados</h1>
         <Slider>
           {Imgs.map((inf) => (
-            <div className={Styles.item}>
+            <div className={Styles.item} key={inf.id}>
               <img src={inf.img} alt={inf.id} />
             </div>
           ))}

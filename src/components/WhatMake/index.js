@@ -22,7 +22,13 @@ function WhatMake(props) {
             </p>
             <Grid xs={12} container={true} className={Styles.galery}>
               {Imgs.map((im) => (
-                <Grid item={true} xs={12} sm={6} className={Styles.imgflex}>
+                <Grid
+                  item={true}
+                  xs={12}
+                  sm={6}
+                  key={im.id}
+                  className={Styles.imgflex}
+                >
                   <div className={Styles.contentimg}>
                     <img src={im.img} alt={im.id} />
                   </div>

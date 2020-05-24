@@ -11,7 +11,7 @@ function Comments(props) {
       <div className={Styles.container}>
         <Slider>
           {Info.map((inf) => (
-            <div className={Styles.infotext}>
+            <div className={Styles.infotext} key={inf.id}>
               <div className={Styles.contimg}>
                 <img src={inf.img} alt={inf.id} />
               </div>

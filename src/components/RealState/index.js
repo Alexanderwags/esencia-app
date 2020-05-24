@@ -30,7 +30,7 @@ function RealState(props) {
         </div>
         <Slider className="quepasa" style={{ width: "100%" }}>
           {Info.map((info) => (
-            <div>
+            <div key={info.id}>
               <Card {...info} key={info.id} />
             </div>
           ))}

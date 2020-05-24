@@ -18,7 +18,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MailIcon from "@material-ui/icons/Mail";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import img from "../../assests/Svg/portada.svg";
-import Styles from "./styles/Styles.module.scss";
+import "./styles/Styles.scss";
 import KeyPortada from "../../assests/Svg/KeyPortada";
 const drawerWidth = 240;
 
@@ -83,20 +83,77 @@ export default function PersistentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [animate, setanimate] = useState(false);
+  const [animate, setanimate] = useState(true);
 
   useEffect(() => {
-    return console.log(window.scrollY);
-  }, []);
-  function verifiqued() {
-    let scrool = window.scrollY;
+    let element = document.getElementById("CARDD");
+    let head = document.getElementById("HEADERR");
+    let let1 = document.getElementById("ecencia");
+    let let2 = document.getElementById("inm");
+    let let0 = document.getElementById("key");
+    // element.onanimationend = () => {
+    //   console.log("event : ", element.style.animationName);
+    //   element.setAttribute("style", " animation-play-state: paused;");
+    //   element.style.height = "41px";
+    // };
+    // element.addEventListener("webkitAnimationEnd", myStartFunction);
 
-    if (scrool > 100) {
-      setanimate(true);
-    } else if (scrool == 0) {
-      setanimate(false);
+    // function myStartFunction(event) {
+    //   let com = event.animationName;
+    //   com += "";
+    //   console.log(com);
+    //   if (com === "openn") {
+    //     console.log("Animation-name is: ", event.animationName);
+    //   }
+    // }
+    if (animate === false) {
+      let1.setAttribute("style", "display:block");
+      let2.setAttribute("style", "display:block");
+      let0.setAttribute("style", "fill:#000");
+      element.style.height = "0";
+      element.style.paddingTop = "40px";
+      element.style.backgroundColor = "#fff";
+      element.setAttribute("style", "box-shadow: block");
+      head.setAttribute("style", "background: none");
+      head.style.boxShadow = "none";
     }
-  }
+    element.addEventListener("animationend", function (e) {
+      let name = "" + e.animationName;
+      if (name === "close") {
+        let1.setAttribute("style", "display:none");
+        let2.setAttribute("style", "display:none");
+        let0.setAttribute("style", "fill:#fff");
+        element.style.height = "0";
+        element.style.paddingTop = "40px";
+        element.style.backgroundColor = "#287c8f";
+        element.style.boxShadow = "none";
+        head.style.backgroundColor = "#287c8f";
+      }
+    });
+    if (animate) {
+      element.setAttribute("style", "animation-play-state: running");
+    } else if (animate === false) {
+      element.setAttribute("style", "animation-play-state: running");
+    }
+    window.addEventListener(
+      "scroll",
+      function () {
+        let st = window.scrollY;
+
+        if (st > 0) {
+          setanimate(true);
+          element.className = "carddd animate";
+
+          console.log("cambio");
+        } else if (st === 0) {
+          setanimate(false);
+          element.className = "carddd animated";
+        }
+      },
+      false
+    );
+  }, [animate]);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -106,31 +163,28 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <div className={Styles.header}>
+    <div className="header">
       <AppBar
         position="fixed"
+        id="HEADERR"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
         style={{ background: "none", border: "0", boxShadow: "none" }}
       >
-        <Toolbar className={Styles.container}>
+        <Toolbar className="containerrr">
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(
-              classes.menuButton,
-              open && classes.hide,
-              Styles.menu
-            )}
+            className={clsx(classes.menuButton, open && classes.hide, "menu")}
           >
             <MenuIcon />
           </IconButton>
           <Router>
             <Route path="/">
-              <div className={Styles.card}>
+              <div className="carddd " id="CARDD">
                 <Link to="/">
                   <KeyPortada />
                 </Link>
@@ -138,7 +192,7 @@ export default function PersistentDrawerLeft() {
             </Route>
           </Router>
           <Router>
-            <div className={Styles.router}>
+            <div className="router">
               <Link to="/">Home</Link>
               <Link to="/">Nosotros</Link>
               <Link to="/">Inmuebles</Link>
