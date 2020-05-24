@@ -4,7 +4,9 @@ import SearchHome from "../components/SearchHome";
 import RealState from "../components/RealState";
 import WhatMake from "../components/WhatMake";
 import HomeContact from "../components/HomeContact";
-import Allies from "./../components/Allies/index";
+import Allies from "./../components/Allies";
+import Comments from "../components/Comments";
+import BlogInfo from "./../components/BlogInfo/index";
 const Home = (props) => {
   return (
     <div>
@@ -13,6 +15,8 @@ const Home = (props) => {
       <WhatMake />
       <HomeContact />
       <Allies />
+      <Comments />
+      <BlogInfo />
     </div>
   );
 };
