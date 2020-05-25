@@ -33,19 +33,34 @@
       width: 154px;
       max-width: 100%;
     }
+    @media (max-width: 1023px) {
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      display: flex;
+    }
   }
 
   .containerrr {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 1180px;
+    width: 100%;
+    max-width: 1180px;
     margin: 0 auto;
     border: 0;
+    @media (max-width: 1023px) {
+      background-color: #2f9bb3;
+    }
+    @media (min-width: 1024px) {
+      background-color: none;
+    }
     .menu {
-      display: none !important;
-      @media (max-width: 992px) {
-        display: block !important;
+      @media (max-width: 1023px) {
+        display: block;
+      }
+      @media (min-width: 1024px) {
+        display: none;
       }
     }
     .router {
@@ -58,6 +73,12 @@
         color: white;
         width: 20%;
         text-decoration: none;
+      }
+      @media (max-width: 1023px) {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        display: flex;
       }
     }
   }

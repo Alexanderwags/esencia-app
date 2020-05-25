@@ -14,11 +14,17 @@
     z-index: 3;
     .info {
       color: white;
+      @media (max-width: 475px) {
+        margin: 10px;
+      }
       h1 {
         font-size: 2.46688rem;
         line-height: 1.33215;
         letter-spacing: 0rem;
         color: #fff;
+        @media (max-width: 475px) {
+          font-size: 2rem;
+        }
       }
     }
     .search {
@@ -27,11 +33,17 @@
       z-index: 3;
       .nav {
         display: flex;
-        flex-wrap: wrap;
+
         margin-bottom: 5px;
+        @media (max-width: 475px) {
+          margin: 10px;
+        }
         a {
           width: 100%;
-          max-width: 131.154px;
+          max-width: 132px;
+          @media (max-width: 475px) {
+            margin: 0 10px 10px 0;
+          }
           height: 40.424px;
           display: flex;
           justify-content: center;

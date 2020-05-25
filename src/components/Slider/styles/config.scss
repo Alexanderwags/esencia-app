@@ -5,3 +5,8 @@
 .swiper-container.swiper-container-initialized {
   overflow: unset;
 }
+.swiper-slide {
+  @media (max-width: 575px) {
+    width: 100% !important;
+  }
+}

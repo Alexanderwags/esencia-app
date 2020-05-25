@@ -10,8 +10,10 @@ function Subscribe(props) {
     >
       <h1>Entérate de nuestras últimas noticias</h1>
       <form>
-        <input type="text" placeholder="Email" />
-        <button type="submit">¡Quiero Subscribirme!</button>
+        <div className={Styles.formcontrol}>
+          <input type="text" placeholder="Email" />
+          <button type="submit">¡Quiero Subscribirme!</button>
+        </div>
       </form>
     </section>
   );
